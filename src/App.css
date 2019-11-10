@@ -1,33 +1,70 @@
-.App {
+.container{
+  margin-left: 20px;
+}
+#clock{
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+#timer{
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 50px;
+  font: 20px bold Arial; 
+}
+
+#pauseButton{
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 5px 35px;
+  cursor: pointer;
+}
+
+.App {
+  text-align: center;
+}
+#answerOptions > li{
+  cursor: pointer;
+}
+
+li:hover{
+  background-color: #f5f542;
+}
+
+@keyframes blinking {
+  0%{
+    background-color: #f5f542;
+    }
+  /* YOU CAN ADD MORE COLORS IN THE KEYFRAMES IF YOU WANT
+  50%{
+    background-color: #55d66b;
+    border: 5px solid #126620;
+  }
+  */
+  100%{
+    background-color: #42f5aa;
+   }
+}
+.matchedAnswer{
+  /* NAME | TIME | ITERATION */
+  animation: blinking 1s infinite;
+}
+
+.selectedAnswer {
+  background-color: #f5f542;
+}
+
+.correctAnswer{
+  background-color: #42f5aa;
+}
+
+.disabledOption{
   pointer-events: none;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.disabledList{
+  cursor: not-allowed;
 }
